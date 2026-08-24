@@ -3,9 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>MotorStore - Autos</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+    <header>
+        <nav>
+            <h2 style="color: white;">MotorStore</h2>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="Autos.html">Autos</a></li>
+                <li><a href="Motos.html">Motos</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+            <button onclick="alternarModo()">Modo Oscuro</button>
+        </nav>
+    </header>
+
+    <main>
+        <h1 style="text-align: center;">Servicios de Automóviles</h1>
+        
+        <section class="grid-catalogo">
+            <article class="card">
+                <img src="img/auto1.jpg" alt="Servicio Basico">
+                <h3>Cambio de Ampolletas</h3>
+                <p>Motor Turbo V6, 450 HP.</p>
+                <p style="color: #00adb5; font-weight: bold; margin: 10px 0;">$15.000</p>
+                <button onclick="mostrarMensaje()">Agendar</button>
+            </article>
+
+            <article class="card">
+                <img src="img/auto2.jpg" alt="Servicio Intermedio">
+                <h3>Cambio de pastillas de frenos</h3>
+                <p style="color: #00adb5; font-weight: bold; margin: 10px 0;">$22.000</p>
+                <button onclick="mostrarMensaje()">Agendar</button>
+            </article>
+
+            <article class="card">
+                <img src="img/auto3.jpg" alt="servicio Avanzado">
+                <h3>Reparacion caja de Cambios</h3>
+                <p style="color: #00adb5; font-weight: bold; margin: 10px 0;">$38.900</p>
+                <button onclick="mostrarMensaje()">Agendar</button>
+            </article>
+        </section>
+    </main>
+    <main>
+        <h1 style="text-align: center;">Servicios de Motocicletas</h1>
+        
+        <section class="grid-catalogo">
+            <article class="card">
+                <img src="img/auto1.jpg" alt="Servicio Basico">
+                <h3>Cambio de aceite</h3>
+                <p>Motor Turbo V6, 450 HP.</p>
+                <p style="color: #00adb5; font-weight: bold; margin: 10px 0;">$9.000</p>
+                <button onclick="mostrarMensaje()">Agendar</button>
+            </article>
+
+            <article class="card">
+                <img src="img/auto2.jpg" alt="Servicio Intermedio">
+                <h3>Alineacion de Neumatico</h3>
+                <p style="color: #00adb5; font-weight: bold; margin: 10px 0;">$12.000</p>
+                <button onclick="mostrarMensaje()">Agendar</button>
+            </article>
+
+            <article class="card">
+                <img src="img/auto3.jpg" alt="servicio Avanzado">
+                <h3>Rectificacion de culatas</h3>
+                <p style="color: #00adb5; font-weight: bold; margin: 10px 0;">$28.900</p>
+                <button onclick="mostrarMensaje()">Agendar</button>
+            </article>
+        </section>
+    </main>
     
 </body>
 </html>
