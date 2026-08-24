@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MotorStore - Inicio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h2 style="color: white;">MotorStore</h2>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="Autos.html">Autos</a></li>
+                <li><a href="Motos.html">Motos</a></li>
+            </ul>
+            <button onclick="alternarModo()">Modo Oscuro</button>
+        </nav>
+    </header>
+
+    <main>
+        <h1 style="text-align: center;">Bienvenidos a MotorStore</h1>
+        <p style="text-align: center; margin-top: 10px;">Tu tienda de vehículos y motocicletas.</p>
+        
+        <div style="text-align: center; margin-top: 15px;">
+            <button onclick="mostrarMensaje()">Ver mensaje de bienvenida</button>
+        </div>
+
+        <section class="grid-catalogo">
+            <article class="card">
+                <img src="img/auto1.jpg" alt="Catálogo Autos">
+                <h3 style="margin: 10px 0;">Catálogo de Autos</h3>
+                <p style="margin-bottom: 15px;">Modelos deportivos, SUV y sedán.</p>
+                <a href="Autos.html"><button>Ir a Autos</button></a>
+            </article>
+
+            <article class="card">
+                <img src="img/moto1.jpg" alt="Catálogo Motos">
+                <h3 style="margin: 10px 0;">Catálogo de Motos</h3>
+                <p style="margin-bottom: 15px;">Modelos de pista, touring y enduro.</p>
+                <a href="Motos.html"><button>Ir a Motos</button></a>
+            </article>
+        </section>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

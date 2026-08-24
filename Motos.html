@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MotorStore - Motos</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h2 style="color: white;">MotorStore</h2>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="Autos.html">Autos</a></li>
+                <li><a href="Motos.html">Motos</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+            <button onclick="alternarModo()">Modo Oscuro</button>
+        </nav>
+    </header>
+
+    <main>
+        <h1 style="text-align: center;">Catálogo de Motocicletas</h1>
+        
+        <section class="grid-catalogo">
+            <article class="card">
+                <img src="img/moto1.jpg" alt="Moto Pista">
+                <h3>Superbike 1000cc</h3>
+                <p>Diseño aerodinámico y frenos de disco ABS.</p>
+                <p style="color: #00adb5; font-weight: bold; margin: 10px 0;">$12.500.000</p>
+                <button onclick="mostrarMensaje()">Consultar</button>
+            </article>
+
+            <article class="card">
+                <img src="img/moto2.jpg" alt="Moto Custom">
+                <h3>Custom Cruiser</h3>
+                <p>Motor V-Twin clásico, perfecta para la ruta.</p>
+                <p style="color: #00adb5; font-weight: bold; margin: 10px 0;">$9.800.000</p>
+                <button onclick="mostrarMensaje()">Consultar</button>
+            </article>
+
+            <article class="card">
+                <img src="img/moto3.jpg" alt="Moto Scooter">
+                <h3>Scooter Urbano 125cc</h3>
+                <p>Ecológica, ágil y de muy bajo consumo.</p>
+                <p style="color: #00adb5; font-weight: bold; margin: 10px 0;">$2.400.000</p>
+                <button onclick="mostrarMensaje()">Consultar</button>
+            </article>
+        </section>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
