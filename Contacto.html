@@ -51,7 +51,7 @@
         <h2 style="text-align: center; margin-top: 40px;">Envíanos un mensaje</h2>
 
         <section class="form-contacto">
-            <form onsubmit="event.preventDefault(); mostrarMensaje();" style="display: flex; flex-direction: column; gap: 8px;">
+            <form onsubmit="event.preventDefault(); EnviarMensaje();" style="display: flex; flex-direction: column; gap: 8px;">
                 <label for="nombre">Nombre</label>
                 <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
 
@@ -72,7 +72,8 @@
                 <label for="mensaje">Mensaje</label>
                 <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos qué necesitas..." required></textarea>
 
-                <button type="submit">Enviar mensaje</button>
+               <button type="button" onclick="EnviarMensaje()">Enviar mensaje</button>
+           
             </form>
         </section>
 

@@ -37,4 +37,7 @@ function YamahaDisponible(){
     alert("Stock disponible: 7 Yamaha YZF-R15 en tu region");
 }
 
+function EnviarMensaje(){
+    alert("Se ha enviado con exito...");
+}
 

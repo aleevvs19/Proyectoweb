@@ -1,24 +1,41 @@
-/* Requisitos: Reset, fuentes, padding y margin */
+/* ── Variables Globales ── */
+:root {
+    --border: rgba(0, 0, 0, 0.1);
+    --text-tertiary: #333333;
+    --accent: #00adb5;
+}
+
+/* ── Reset y Estilos Base ── */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* ── Fondo Degradado Gris (Modo Claro) ── */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+    font-size: 16px;
+    background: linear-gradient(135deg, #eef2f3 0%, #8e9eab 100%);
+    background-attachment: fixed;
     color: #333333;
     line-height: 1.6;
     transition: background-color 0.3s ease, color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
+/* ── Fondo Degradado (Modo Oscuro) ── */
 body.modo-oscuro {
-    background-color: #121212;
+    background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+    background-attachment: fixed;
     color: #ffffff;
+    --border: rgba(255, 255, 255, 0.1);
+    --text-tertiary: #aaaaaa;
 }
 
-/* Navegación y Header */
+/* ── Navegación y Header ── */
 header {
     background-color: #1e1e1e;
     padding: 1rem 2rem;
@@ -52,11 +69,13 @@ nav a:hover {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* Layout y Tarjetas */
+/* ── Layout Principal y Tarjetas ── */
 main {
     max-width: 1200px;
     margin: 30px auto;
     padding: 0 20px;
+    flex: 1;
+    width: 100%;
 }
 
 .grid-catalogo {
@@ -67,18 +86,18 @@ main {
 }
 
 .card {
-    background-color: #ffffff;
-    border: 1px solid #dddddd;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(5px);
+    border: 1px solid var(--border);
     border-radius: 10px;
     padding: 20px;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
 }
 
 body.modo-oscuro .card {
-    background-color: #1e1e1e;
-    border-color: #333333;
+    background-color: rgba(30, 30, 30, 0.95);
 }
 
 .card:hover {
@@ -94,6 +113,7 @@ body.modo-oscuro .card {
     display: block;
 }
 
+/* ── Botones ── */
 button {
     padding: 10px 18px;
     background-color: #00adb5;
@@ -109,23 +129,25 @@ button:hover {
     background-color: #008c93;
 }
 
-/* Adaptación Móvil */
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        gap: 15px;
-    }
-}
-
+/* ── Formularios ── */
 input,
 textarea,
 select {
-    padding: 12px 14px;       
+    padding: 12px 14px;      
     border: 2px solid #00adb5; 
     border-radius: 6px;
     font-size: 16px;
     width: 100%;
     box-sizing: border-box;   
+    background-color: #ffffff;
+    color: #333333;
+}
+
+body.modo-oscuro input,
+body.modo-oscuro textarea,
+body.modo-oscuro select {
+    background-color: #2b2b2b;
+    color: #ffffff;
 }
 
 input:focus,
@@ -139,17 +161,39 @@ select:focus {
     max-width: 500px;
     margin: 30px auto; 
     padding: 30px;          
-    background-color: #ffffff;
-    border: 1px solid #ddd;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(5px);
+    border: 1px solid var(--border);
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
 }
 
-  /* ── Footer ── */
-  footer {
-   border-top: 0.5px solid var(--border);
-   padding: 2rem;
-   text-align: center;
-  }
-  footer p { font-size: 13px; color: var(--text-tertiary); }
-  footer strong { color: var(--accent); font-weight: 500; }
+body.modo-oscuro .form-contacto {
+    background-color: rgba(30, 30, 30, 0.95);
+}
+
+/* ── Adaptación Móvil ── */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+/* ── Footer ── */
+footer {
+    padding: 1.5rem;
+    text-align: center;
+    background: transparent;
+    margin-top: auto;
+}
+
+footer p { 
+    font-size: 13px; 
+    color: var(--text-tertiary); 
+}
+
+footer strong { 
+    color: var(--accent); 
+    font-weight: 500; 
+}
