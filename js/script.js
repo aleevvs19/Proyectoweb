@@ -7,3 +7,7 @@ function mostrarMensaje() {
 function alternarModo() {
     document.body.classList.toggle("modo-oscuro");
 }
+
+function agendarMensaje(){
+    alert("Gracias por agendar");
+}
