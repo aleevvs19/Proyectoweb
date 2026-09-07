@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MotorStore - Registro de Usuario</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h2 style="color: white;">MotorStore</h2>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="Nosotros.html">Nosotros</a></li>
+                <li><a href="Autos.html">Autos</a></li>
+                <li><a href="Motos.html">Motos</a></li>
+                <li><a href="Servicios.html">Servicios</a></li>
+                <li><a href="Galeria.html">Galería</a></li>
+                <li><a href="Blogs.html">Blogs</a></li>
+                <li><a href="Contacto.html">Contacto</a></li>
+                <li><a href="login.html">Iniciar Sesión</a></li>
+                <li><a href="registro.html">Registro</a></li>
+                <li><a href="admin.html">Admin</a></li>
+            </ul>
+            <button onclick="alternarModo()">Modo Oscuro</button>
+        </nav>
+    </header>
+
+    <main>
+        <h1 style="text-align: center;">Registro de Usuario</h1>
+
+        <section class="form-contacto">
+            <form id="formRegistro" onsubmit="validarRegistro(event)" style="display: flex; flex-direction: column; gap: 12px;">
+                <label for="regNombre">Nombre Completo</label>
+                <input type="text" id="regNombre" placeholder="Tu nombre" required>
+
+                <label for="regRut">RUT / RUN (Sin puntos ni guion, ej: 19011022K)</label>
+                <input type="text" id="regRut" placeholder="19011022K" required>
+
+                <label for="regEmail">Correo Electrónico (@duoc.cl, @profesor.duoc.cl o @gmail.com)</label>
+                <input type="email" id="regEmail" placeholder="ejemplo@duoc.cl" required>
+
+                <label for="regPassword">Contraseña (4 a 10 caracteres)</label>
+                <input type="password" id="regPassword" placeholder="••••••••" required>
+
+                <p id="mensajeError" style="color: #ff4d4d; font-weight: bold; text-align: center; display: none;"></p>
+
+                <button type="submit">Registrarse</button>
+            </form>
+            <p style="text-align: center; margin-top: 15px;">¿Ya tienes cuenta? <a href="login.html" style="color: #00adb5;">Inicia sesión aquí</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 <strong>MotorStore</strong> · Servicios personalizados · Santiago, Chile · Desarrollado por Estudiantes de <strong>Duoc UC</strong></p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

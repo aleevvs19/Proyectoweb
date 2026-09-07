@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MotorStore - Panel de Administración</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h2 style="color: white;">MotorStore Admin</h2>
+            <ul>
+                <li><a href="index.html">Ver Tienda</a></li>
+                <li><a href="admin.html">Panel Admin</a></li>
+            </ul>
+            <button onclick="alternarModo()">Modo Oscuro</button>
+        </nav>
+    </header>
+
+    <main>
+        <h1 style="text-align: center;">Panel de Administración</h1>
+
+        <!-- Mantenedor de Productos -->
+        <section class="form-contacto" style="max-width: 800px; margin-bottom: 40px;">
+            <h2>Mantenedor de Productos (Autos / Motos)</h2>
+            <br>
+            <form id="formProducto" onsubmit="guardarProducto(event)" style="display: flex; flex-direction: column; gap: 10px;">
+                <label for="prodNombre">Nombre del Producto</label>
+                <input type="text" id="prodNombre" placeholder="Ej: Porsche 911" required>
+
+                <label for="prodPrecio">Precio ($)</label>
+                <input type="number" id="prodPrecio" placeholder="120000000" required>
+
+                <label for="prodCategoria">Categoría</label>
+                <select id="prodCategoria">
+                    <option value="Autos">Autos</option>
+                    <option value="Motos">Motos</option>
+                    <option value="Servicios">Servicios</option>
+                </select>
+
+                <button type="submit">Guardar Producto</button>
+            </form>
+        </section>
+
+        <!-- Mantenedor de Usuarios -->
+        <section class="form-contacto" style="max-width: 800px;">
+            <h2>Mantenedor de Usuarios Registrados</h2>
+            <br>
+            <ul id="listaUsuarios" style="list-style: none; text-align: left; line-height: 2;">
+                <li><strong>Juan Pérez</strong> - juan@duoc.cl - RUT: 19011022K</li>
+                <li><strong>María González</strong> - maria@gmail.com - RUT: 184561239</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 <strong>MotorStore</strong> · Panel Administrador · <strong>Duoc UC</strong></p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

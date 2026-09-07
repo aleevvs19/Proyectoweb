@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MotorStore - Detalle de Producto</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h2 style="color: white;">MotorStore</h2>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="Nosotros.html">Nosotros</a></li>
+                <li><a href="Autos.html">Autos</a></li>
+                <li><a href="Motos.html">Motos</a></li>
+                <li><a href="Servicios.html">Servicios</a></li>
+                <li><a href="Galeria.html">Galería</a></li>
+                <li><a href="Blogs.html">Blogs</a></li>
+                <li><a href="Contacto.html">Contacto</a></li>
+                <li><a href="login.html">Iniciar Sesión</a></li>
+                <li><a href="registro.html">Registro</a></li>
+                <li><a href="admin.html">Admin</a></li>
+            </ul>
+            <button onclick="alternarModo()">Modo Oscuro</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="form-contacto" style="max-width: 900px;">
+            <div style="display: flex; gap: 20px; flex-wrap: wrap; align-items: center;">
+                <img id="productoImagen" src="img/amg_gt.jpg" alt="Producto" style="width: 100%; max-width: 400px; height: 260px; object-fit: cover; border-radius: 8px; border: 2px solid #00adb5;">
+                <div style="flex: 1; min-width: 280px; text-align: left;">
+                    <h2 id="productoNombre">Mercedes-AMG GT</h2>
+                    <p style="color: #00adb5; font-size: 22px; font-weight: bold; margin: 10px 0;" id="productoPrecio">$155.000.000</p>
+                    <p id="productoDescripcion" style="margin-bottom: 15px;">Motor V8 Biturbo con 523 HP. Tracción trasera, transmisión de doble embrague de 7 velocidades y acabado deportivo de alta gama.</p>
+                    <button onclick="agregarAlCarrito('Mercedes-AMG GT', 155000000)">Agregar al Carrito</button>
+                </div>
+            </div>
+            <br>
+            <a href="Autos.html"><button style="background-color: #555;">← Volver al Catálogo</button></a>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 <strong>MotorStore</strong> · Servicios personalizados · Santiago, Chile · Desarrollado por Estudiantes de <strong>Duoc UC</strong></p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
